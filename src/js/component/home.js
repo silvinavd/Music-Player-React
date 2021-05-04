@@ -138,11 +138,18 @@ export function Home() {
 			name: "x-men",
 			url: "files/cartoons/songs/x-men.mp3"
 		}
-    ]);
-    
+	]);
 
+	//ARRAY URL
+	/*const songURL = songList.map(song => ({
+		url: "https://assets.breatheco.de/apis/sound/" + song.url,
+		name: song.name
+	}));
+	console.log(songURL);
+*/
 	let audio = useRef();
 
+	//BUTTONS
 	const playPause = () => {
 		if (audio.current.paused) {
 			audio.current.play();
@@ -151,17 +158,24 @@ export function Home() {
 		}
 	};
 
+	//RETURN
 	return (
 		<div className="container">
 			<div className="header"></div>
 			<div className="song">
-                
-
-
-                
 				<ol>
-					<li>SONG NAME</li>
-					<audio ref={audio}></audio>
+					<li>
+						{songList.map((nombre, i) => {
+							return (
+								<div key={nombre}>
+									<p>{i}</p>
+									<p>{nombre}</p>
+								</div>
+							);
+						})}
+
+						<audio ref={audio}></audio>
+					</li>
 				</ol>
 			</div>
 			<div className="footer fluid fixed-bottom">
