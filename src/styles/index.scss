@@ -10,14 +10,16 @@
     color: white;
     border-bottom: 1px solid #4b4f4d;
     padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
 .song:hover {
 background-color: #636664;}
 
 .header {
-    height: 20px;
+    height: 45px;
     background-color: #3f4240;
+    text-align: center;
 }
 .footer {
     height: 50px;
@@ -32,4 +34,8 @@ background-color: #636664;}
 padding: 20px;
 padding-top: 10px!important;
 }
-    
+img{
+    height: 35px;
+    color: white;
+    margin-top: 5px;
+}
